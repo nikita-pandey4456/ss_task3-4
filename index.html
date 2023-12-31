@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Login Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Login Dashboard</title>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="username">Username (Email):</label>
-                <input type="text" id="username" name="username" placeholder="Enter your email" required>
-                <p id="usernameError" class="error"></p>
-            </div>
-
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                <p id="passwordError" class="error"></p>
-            </div>
-
-            <button type="button" onclick="validateLogin()">Login</button>
-        </form>
+    <div class="cc">
+  <div class="container">
+    <h2><span class="green-text">SMART</span><span class="white-text">SERV</span></h2>
+    <div class="login-box">
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username (Email):</label>
+          <input type="text" id="username" name="username" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <button type="button" onclick="validateLogin()">Login</button>
+      </form>
     </div>
-
-    <script src="script.js"></script>
+  </div>
+    </div>
+  <script src="script.js"></script>
 </body>
 </html>

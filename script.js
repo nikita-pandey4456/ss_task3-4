@@ -1,25 +1,25 @@
+const usernameField = document.getElementById("username");
+const passwordField = document.getElementById("password");
+const loginForm = document.getElementById("login-form");
 
-function validateLogin() {
+loginForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent default form submission
 
-    document.getElementById('usernameError').innerText = '';
-    document.getElementById('passwordError').innerText = '';
-
-
-    const username = document.getElementById('username').value;
-    const usernameRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!usernameRegex.test(username)) {
-        document.getElementById('usernameError').innerText = 'Invalid email format';
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(usernameField.value)) {
+        alert("Please enter a valid email address.");
         return;
     }
 
-    const password = document.getElementById('password').value;
-    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@]{8,}$/;
-
-    if (!passwordRegex.test(password)) {
-        document.getElementById('passwordError').innerText = 'Invalid password format';
+    // Password validation (allow @ but not other special characters)
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8,}$/;
+    if (!passwordRegex.test(passwordField.value)) {
+        alert("Password must contain an uppercase letter, a number, and @.");
         return;
     }
 
-    alert('Login successful!');
-}
+    // Handle successful validation (e.g., send login data to a server)
+    console.log("Login successful!");
+    // Implement server-side logic here
+});
