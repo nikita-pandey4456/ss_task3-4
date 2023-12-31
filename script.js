@@ -1,9 +1,9 @@
 const usernameField = document.getElementById("username");
 const passwordField = document.getElementById("password");
-const loginForm = document.getElementById("login-form");
+const loginForm = document.getElementById("loginForm");
 
 loginForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,3 +23,9 @@ loginForm.addEventListener("submit", (event) => {
     console.log("Login successful!");
     // Implement server-side logic here
 });
+
+function forgotPassword() {
+    // Implement the logic for handling the "Forgot Password" action
+    alert("Forgot Password functionality is not implemented yet!");
+    // You can redirect the user to a password recovery page or implement your logic here
+}
